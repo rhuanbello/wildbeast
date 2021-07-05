@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Volkorn", Georgia, serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 10rem;
+}
+
