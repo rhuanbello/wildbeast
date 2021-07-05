@@ -16,7 +16,7 @@ body{
 }
 
 img {
-    max-width: 10rem;
+    max-width: 100%;
 }
 
 /* GRID ALL */
@@ -30,8 +30,42 @@ img {
         "footer footer footer";
 }
 
+/* Header */
+
 .header {
     grid-area: header;
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.logo {
+    max-width: 20rem;
+}
+
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header nav a {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.8rem;
+    background: rgba(0,0,0,.1);
+    border-radius: .5rem;
+    transition: .1s;
+}
+
+.header nav a:hover {
+    background: rgba(0,0,0,.5);
+}
+
+.header li + li {
+    margin-left: 3rem;
 }
 
 .sidenav {
@@ -49,3 +83,4 @@ img {
 .footer {
     grid-area: footer;
 }
+
