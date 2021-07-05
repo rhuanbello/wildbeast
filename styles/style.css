@@ -19,3 +19,33 @@ img {
     max-width: 10rem;
 }
 
+/* GRID ALL */
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(16rem, 1fr) 3fr 30rem;
+    grid-template-areas: 
+        "header header header"
+        "sidenav content anuncios"
+        "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidenav {
+    grid-area: sidenav;
+}
+
+.content {
+    grid-area: content;
+}
+
+.anuncios {
+    grid-area: anuncios;
+}
+
+.footer {
+    grid-area: footer;
+}
