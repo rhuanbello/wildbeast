@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     list-style-type: none;
     text-decoration: none;
 }
@@ -11,12 +11,12 @@ html {
 }
 
 body{
-    font-family: "Volkorn", Georgia, serif;
+    font-family: "Vollkorn", Georgia, serif;
     font-size: 1.6rem;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     display: block;
     border-radius: .5rem;
 }
@@ -30,6 +30,28 @@ img {
         "header header header"
         "sidenav content anuncios"
         "footer footer footer";
+}
+
+@media (max-width: 1200px) {
+    .container {
+        grid-template-areas: 
+        "header header header "
+        "sidenav content content "
+        "sidenav anuncios anuncios"
+        "footer footer footer";
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "header"
+        "sidenav"
+        "content"
+        "anuncios"
+        "footer"
+    }
 }
 
 /* Header */
@@ -100,6 +122,128 @@ img {
 
 .content {
     grid-area: content;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+}
+
+.col-wide {
+    grid-column: 1 / -1;
+}
+
+.imagem-1 {
+    grid-row: span 2;
+    align-self: end;
+}
+
+.item-2 {
+    align-self: end;
+}
+
+/* Estilos Content */
+
+p {
+    font-size: 1.92rem;
+    line-height: 2.56rem;
+    letter-spacing: -0.005rem;
+    color: rgba(0,0,0,.7);
+}
+
+.informacoes p + p {
+    margin-top: 3rem;
+}
+
+/* Titulo */
+
+.title {
+    color: #B07DFB;
+}
+
+.title h1 {
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.title span {
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+/* Description */
+
+.description {
+    display: flex;
+    align-items: flex-start;
+}
+
+.description > div {
+    width: 8rem;
+    text-align: center;
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+    border-radius: .5rem;
+    box-shadow: .5rem .5rem 1.5rem 0rem rgba(44,44,44,0.15);
+    position: relative;
+}
+
+.description > div:first-child {
+    margin-right: 3rem;
+}
+
+.description span {
+    display: block;
+    color: #B07DFB;
+}
+
+.number {
+    font-size: 4.8rem;
+    line-height: 1;
+    margin: 1rem auto;
+}
+
+.rotulo {
+    background: white;
+    border-radius: 0 0 .5rem .5rem;
+    padding: .5rem 0;
+    position: relative;
+    top: .2rem;
+}
+
+.destaque {
+    font-size: 1.4rem;
+    color: #B07DFB;
+    max-width: 22.4rem;
+}
+
+.citacao, .atributos {
+    padding: 3rem;
+    align-self: start;
+    border-radius: .5rem;
+    box-shadow: .5rem .5rem 1.5rem 0rem rgba(44,44,44,0.15);
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.citacao p {
+    font-size: 2.4rem;
+    font-style: italic;
+    text-align: center;
+    max-width: 50rem;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.atributos li {
+    color: #fff;
+    font-family: Courier, monospace;
+    font-size: 1.8rem;
+    padding: 2rem;
+}
+
+.atributos li + li {
+    border-top: 2px solid #B07DFB;
 }
 
 /* Anuncios */
